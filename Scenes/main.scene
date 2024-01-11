@@ -1,0 +1,170 @@
+{
+  "Id": "9fdf3f69-f513-476a-af3c-d4bfe154016c",
+  "GameObjects": [
+    {
+      "Id": "e11eb3e6-3a39-40f0-a069-3c8e26d730c9",
+      "Name": "Sun",
+      "Position": "-26.23138,-107.4914,-16.907",
+      "Rotation": "-0.00000001721897,0.2888856,-0.00000000000000006712937,0.9573647",
+      "Scale": "5,5,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "DirectionalLight",
+          "__enabled": true,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "Id": "e0fea04f-85a7-4d81-b9a9-56c5e916aba6",
+      "Name": "Player",
+      "Scale": "5,5,1",
+      "Tags": "player",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__version": 0,
+          "__type": "PlayerController",
+          "__enabled": true,
+          "AnimationHelper": "a56807a6-ec74-486c-8ef4-50b3a5829c39",
+          "Body": "a56807a6-ec74-486c-8ef4-50b3a5829c39",
+          "Distance": 350,
+          "Eye": "f8bb7cef-f919-442f-8834-1d03d64097d6",
+          "FirstPerson": false,
+          "Gravity": "0,0,800",
+          "jumpSound": null
+        }
+      ],
+      "Children": [
+        {
+          "Id": "a56807a6-ec74-486c-8ef4-50b3a5829c39",
+          "Name": "Body",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SkinnedModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 341,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__version": 0,
+              "__type": "CitizenAnimationHelper",
+              "__enabled": true,
+              "BodyWeight": 1,
+              "EyeSource": "f8bb7cef-f919-442f-8834-1d03d64097d6",
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "Height": 1,
+              "IkLeftFoot": null,
+              "IkLeftHand": null,
+              "IkRightFoot": null,
+              "IkRightHand": null,
+              "LookAt": null,
+              "LookAtEnabled": false,
+              "Target": "a56807a6-ec74-486c-8ef4-50b3a5829c39"
+            }
+          ]
+        },
+        {
+          "Id": "f8bb7cef-f919-442f-8834-1d03d64097d6",
+          "Name": "Eye",
+          "Position": "0,0,288",
+          "Tags": "player",
+          "Enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "8e768fe7-4a25-4f37-b299-595ce05cd3bd",
+      "Name": "Plane",
+      "Scale": "10,10,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100,0.1",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "245b7210-747e-4140-b06f-d3818180adc0",
+      "Name": "Camera",
+      "Position": "-244.306,64,320",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "CameraComponent",
+          "__enabled": true,
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "main",
+  "Description": "",
+  "__references": []
+}
